@@ -1,0 +1,17 @@
+//자연수 N이 주어졌을 때, N부터 1까지 한 줄에 하나씩 출력하는 프로그램을 작성하시오.
+//Scanner를 썻을때 이유는 모르지만 틀렸다고 떠서 BufferedReader를 사용했다.
+//메모리제한이나 시간 제한 때문에 그런것으로 보임
+
+import java.io.BufferedReader
+import java.io.InputStreamReader
+
+fun main(){
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    var N = Integer.parseInt(br.readLine())
+    br.close()
+
+    while(N>0){
+        System.out.println(N)
+        N--
+    }
+}
