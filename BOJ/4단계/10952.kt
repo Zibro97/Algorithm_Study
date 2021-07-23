@@ -4,15 +4,14 @@ import java.util.*
 
 fun main(){
     val sb = StringBuilder()
-    do{
-        val br = System.`in`.bufferedReader()
-        var st = StringTokenizer(br.readLine()," ")
+    while(true){
+        var st = StringTokenizer(readLine()," ")
 
         var n = st.nextToken().toInt()
         var x = st.nextToken().toInt()
-
+        if(n == 0 &&x == 0)
+            break
         sb.append(n+x).append('\n')
-    }while (n+x !=0)
+    }
     println(sb)
 }
-  
