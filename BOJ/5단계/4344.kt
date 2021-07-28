@@ -36,7 +36,6 @@ private fun overPeople(array: IntArray, averageScore: Int): Int {
             overPeople++
         }
     }
-
     return overPeople
 }
 
