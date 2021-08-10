@@ -7,20 +7,20 @@ import kotlin.math.sqrt
 
 fun main(){
     val br = BufferedReader(InputStreamReader((System.`in`)))
-    val n = br.readLine().toInt() //m이상
-    val m = br.readLine().toInt() //n이하
+    val m = br.readLine().toInt() //m이상
+    val n = br.readLine().toInt() //n이하
     var arr = arrayListOf<Int>()
 
-    for(i in n..m){
-        if(function(i)==0){
+    for(i in m..n){
+        if(function(i)==0){//소수아니면 다음으로 넘어감
             continue
         }else{
-            arr.add(function(i))
+            arr.add(function(i)) //소수이면 배열에 담음
         }
     }
-    if(arr.isEmpty()){
+    if(arr.isEmpty()){ //m이상 n이하에서 소수가 없으면 -1 출력
         print(-1)
-    }else{
+    }else{ //m이상 n이하의 소수들의 합계와 최솟값 출력
         println("${arr.sum()}")
         print("${arr.minOrNull()}")
     }
