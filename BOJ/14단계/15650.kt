@@ -9,6 +9,8 @@ fun main(){
     for(i in 1..n)
         dfs(i,n,m-1,"$i")
     bw.flush()
+    bw.close()
+    br.close()
 }
 private fun dfs(start:Int,n:Int,m:Int,acc:String){
     if (m==0){
